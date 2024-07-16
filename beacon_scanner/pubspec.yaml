@@ -4,6 +4,7 @@ description: A Flutter plugin for scanning bluetooth low energy iBeacon frames.
 repository: https://github.com/gfosmbh/beacon_scanner/tree/main/beacon_scanner
 issue_tracker: https://github.com/gfosmbh/beacon_scanner/issues?q=is%3Aissue+is%3Aopen
 version: 0.0.4
+publish_to: none
 
 environment:
   sdk: ">=2.18.0 <4.0.0"
@@ -20,7 +21,10 @@ flutter:
 dependencies:
   flutter:
     sdk: flutter
-  beacon_scanner_android: ^0.0.4
+  beacon_scanner_android:
+    git:
+      url: https://github.com/GurgenHOVH/beacon_scanner.git
+      path: beacon_scanner_android
   beacon_scanner_ios: ^0.0.3+1
   beacon_scanner_platform_interface: ^0.0.3
 
