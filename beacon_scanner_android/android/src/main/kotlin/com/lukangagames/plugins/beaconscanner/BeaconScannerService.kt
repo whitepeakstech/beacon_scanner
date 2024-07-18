@@ -164,6 +164,7 @@ internal class BeaconScannerService(plugin: BeaconScannerPlugin, context: Contex
             for (region in regionMonitoring!!) {
                 if(region != null) {
                     plugin.getBeaconManager()!!.startMonitoringBeaconsInRegion(region)
+                    plugin.getBeaconManager()!!.setIntentScanningStrategyEnabled(true)
                 }
             }
         } catch (e: RemoteException) {
