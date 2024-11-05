@@ -353,6 +353,9 @@
         CLBeaconRegion *region = [BSUtils regionFromDictionary:dict];
         
         if (region) {
+            region.notifyOnEntry = YES;
+            region.notifyOnExit = YES;
+            region.notifyEntryStateOnDisplay = YES;
             [self.regionMonitoring addObject:region];
         }
     }
