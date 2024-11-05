@@ -360,6 +360,7 @@
     for (CLBeaconRegion *r in self.regionMonitoring) {
         NSLog(@"START: %@", r);
         [self.locationManager startMonitoringForRegion:r];
+        [self.locationManager requestStateForRegion:r];
     }
 }
 
